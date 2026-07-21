@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="FlexTool.AutoLoadMod/FlexTool.AutoLoadMod.csproj" />
+  <Project Path="FlexTool.CheatsMod/FlexTool.CheatsMod.csproj" />
+  <Project Path="FlexTool.DebugInfoMod/FlexTool.DebugInfoMod.csproj" />
+  <Project Path="FlexTool.FPSOptimizer/FlexTool.FPSOptimizer.csproj" />
+  <Project Path="FlexTool.KeepItTogetherMod/FlexTool.KeepItTogetherMod.csproj" />
+  <Project Path="FlexTool.PerfMod/FlexTool.PerfMod.csproj" />
+  <Project Path="FlexTool.TillDeathMod/FlexTool.TillDeathMod.csproj" />
+  <Project Path="FlexTool.SpeedMod/FlexTool.SpeedMod.csproj" />
+  <Project Path="FlexTool/FlexTool.csproj" />
+</Solution>

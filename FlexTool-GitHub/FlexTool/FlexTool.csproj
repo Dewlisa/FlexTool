@@ -1,0 +1,107 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FlexTool.AutoLoadMod\FlexTool.AutoLoadMod.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\FlexTool.SpeedMod\FlexTool.SpeedMod.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\FlexTool.CheatsMod\FlexTool.CheatsMod.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\FlexTool.PerfMod\FlexTool.PerfMod.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\FlexTool.DebugInfoMod\FlexTool.DebugInfoMod.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\FlexTool.FPSOptimizer\FlexTool.FPSOptimizer.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\FlexTool.TillDeathMod\FlexTool.TillDeathMod.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\FlexTool.KeepItTogetherMod\FlexTool.KeepItTogetherMod.csproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\FlexTool.AutoLoadMod\bin\$(Configuration)\FlexTool.AutoLoadMod.dll"
+             Link="AutoLoadMod\FlexTool.AutoLoadMod.dll"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.AutoLoadMod\About\About.xml"
+             Link="AutoLoadMod\About.xml"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.SpeedMod\bin\$(Configuration)\FlexTool.SpeedMod.dll"
+             Link="SpeedMod\FlexTool.SpeedMod.dll"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.SpeedMod\About\About.xml"
+             Link="SpeedMod\About.xml"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.CheatsMod\bin\$(Configuration)\FlexTool.CheatsMod.dll"
+             Link="CheatsMod\FlexTool.CheatsMod.dll"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.CheatsMod\About\About.xml"
+             Link="CheatsMod\About.xml"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.PerfMod\bin\$(Configuration)\FlexTool.PerfMod.dll"
+             Link="PerfMod\FlexTool.PerfMod.dll"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.PerfMod\About\About.xml"
+             Link="PerfMod\About.xml"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.DebugInfoMod\bin\$(Configuration)\FlexTool.DebugInfoMod.dll"
+             Link="DebugInfoMod\FlexTool.DebugInfoMod.dll"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.DebugInfoMod\About\About.xml"
+             Link="DebugInfoMod\About.xml"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.FPSOptimizer\bin\$(Configuration)\FlexTool.FPSOptimizer.dll"
+             Link="FPSOptimizer\FlexTool.FPSOptimizer.dll"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.FPSOptimizer\About\About.xml"
+             Link="FPSOptimizer\About.xml"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.TillDeathMod\bin\$(Configuration)\FlexTool.TillDeathMod.dll"
+             Link="TillDeathMod\FlexTool.TillDeathMod.dll"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.TillDeathMod\About\About.xml"
+             Link="TillDeathMod\About.xml"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.KeepItTogetherMod\bin\$(Configuration)\FlexTool.KeepItTogetherMod.dll"
+             Link="KeepItTogetherMod\FlexTool.KeepItTogetherMod.dll"
+             CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\FlexTool.KeepItTogetherMod\About\About.xml"
+             Link="KeepItTogetherMod\About.xml"
+             CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <SigningCertThumbprint>AE45D9B7F58D9B58B89EAEE39E3801457C9432A0</SigningCertThumbprint>
+  </PropertyGroup>
+
+  <Target Name="SignOutputAssemblies" AfterTargets="Build" Condition="'$(SigningCertThumbprint)' != ''">
+    <Exec Command="powershell -NoProfile -Command &quot;Set-AuthenticodeSignature -FilePath '$(TargetDir)FlexTool.exe' -Certificate (Get-ChildItem Cert:\CurrentUser\My\$(SigningCertThumbprint)) -TimestampServer 'http://timestamp.digicert.com' -HashAlgorithm SHA256&quot;" ContinueOnError="true" />
+    <Exec Command="powershell -NoProfile -Command &quot;Set-AuthenticodeSignature -FilePath '$(TargetDir)FlexTool.dll' -Certificate (Get-ChildItem Cert:\CurrentUser\My\$(SigningCertThumbprint)) -TimestampServer 'http://timestamp.digicert.com' -HashAlgorithm SHA256&quot;" ContinueOnError="true" />
+  </Target>
+
+</Project>
