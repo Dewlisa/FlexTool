@@ -1,6 +1,4 @@
 # FlexTool
-All-in-one RimWorld mod manager, pawn extractor, and performance suite
-# FlexTool
 
 **All-in-one RimWorld mod manager, pawn extractor, and performance suite**
 
@@ -70,7 +68,7 @@ FlexTool/
 └── FlexTool.PerfMod/            # Standalone performance mod
 ```
 
-## 🔧 Key Components
+##  Key Components
 
 - **RimWorldSaveReader.cs** — Handles save file I/O, pawn extraction, mod deployment, and IPC communication
 - **MainWindow.*.cs** — UI pages for Mods, Saves, Dashboard, Analytics, Debug, etc.
@@ -79,15 +77,21 @@ FlexTool/
 
 
 
-## 🐛 Bug Reports & Features
+##  Bug Reports & Features
 
 Found a bug or have a feature request? Open an issue on GitHub or post on Nexus Mods.
 
 
-## 🙏 Credits
+##  Credits
 
 - **Harmony** — For the amazing patching framework
 - **RimWorld modding community** — For inspiration and feedback
+
+
+---
+
+**FlexTool — Manage your mods, manage your colonies, manage your life. 🎮**
+
 
 
 ---
