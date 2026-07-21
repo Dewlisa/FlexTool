@@ -4,7 +4,7 @@
 
 A desktop companion app that makes managing RimWorld mods easier than ever. Install mods with one click, move colonists between saves, boost FPS, and access live performance diagnostics — all from a single application.
 
-## ✨ Features
+##  Features
 
 - **One-Click Mod Installation** — Deploy any mod instantly without manual folder management
 - **Auto-Load Saves** — Launch RimWorld straight into your favorite save on startup
@@ -16,14 +16,14 @@ A desktop companion app that makes managing RimWorld mods easier than ever. Inst
 - **Relationship Mods** — Keep couples together and track relationship health
 - **Speed Controls** — Add 4x and 5x game speed controls
 
-## 📋 Requirements
+##  Requirements
 
 - **Windows only**
 - **.NET 10 Runtime** (free download, link provided in app)
 - **Harmony mod** (free, Steam Workshop link in app)
 - **RimWorld 1.3, 1.4, 1.5, or 1.6**
 
-## 🚀 Build Instructions
+##  Build Instructions
 
 ### Prerequisites
 - Visual Studio 2022 Community (or later)
@@ -49,13 +49,7 @@ dotnet build -c Release
 # FlexTool\bin\Release\net10.0-windows\ + all mod subfolders
 ```
 
-## 📦 Installation
-
-Download the latest release from **Nexus Mods**: [FlexTool](https://www.nexusmods.com/rimworld/mods/)
-
-Or build from source and run `FlexTool.exe`.
-
-## 📁 Project Structure
+##  Project Structure
 
 ```
 FlexTool/
@@ -74,39 +68,27 @@ FlexTool/
 └── FlexTool.PerfMod/            # Standalone performance mod
 ```
 
-## 🔧 Key Components
+##  Key Components
 
 - **RimWorldSaveReader.cs** — Handles save file I/O, pawn extraction, mod deployment, and IPC communication
 - **MainWindow.*.cs** — UI pages for Mods, Saves, Dashboard, Analytics, Debug, etc.
 - **DebugInfoMod.cs** — In-game overlay, crash guard, dev-log mirroring, live pawn IPC
 - **Harmony Patches** — All mods use Harmony for non-invasive game patching
 
-## ⚠️ Known Issues
 
-**Mod Load Order Display:** FlexTool's Mod Manager tab does not update to reflect RimWorld's in-game mod order changes.
 
-**Workaround:** Manage mod load order in RimWorld's in-game Mods menu. FlexTool's display is reference-only. Fix coming soon.
-
-## 🐛 Bug Reports & Features
+##  Bug Reports & Features
 
 Found a bug or have a feature request? Open an issue on GitHub or post on Nexus Mods.
 
-## 📝 License
 
-[Add your license here, e.g., MIT, GPL, etc.]
-
-## 🙏 Credits
+##  Credits
 
 - **Harmony** — For the amazing patching framework
 - **RimWorld modding community** — For inspiration and feedback
-- Built with passion for colony managers everywhere
 
-## 🔗 Links
-
-- **Nexus Mods:** [FlexTool](https://www.nexusmods.com/rimworld/mods/)
-- **Discord:** [Your Discord link if available]
-- **GitHub Issues:** Report bugs and request features here
 
 ---
 
 **FlexTool — Manage your mods, manage your colonies, manage your life. 🎮**
+
