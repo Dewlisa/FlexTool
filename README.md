@@ -6,7 +6,7 @@ All-in-one RimWorld mod manager, pawn extractor, and performance suite
 
 A desktop companion app that makes managing RimWorld mods easier than ever. Install mods with one click, move colonists between saves, boost FPS, and access live performance diagnostics — all from a single application.
 
-## ✨ Features
+##  Features
 
 - **One-Click Mod Installation** — Deploy any mod instantly without manual folder management
 - **Auto-Load Saves** — Launch RimWorld straight into your favorite save on startup
@@ -18,14 +18,14 @@ A desktop companion app that makes managing RimWorld mods easier than ever. Inst
 - **Relationship Mods** — Keep couples together and track relationship health
 - **Speed Controls** — Add 4x and 5x game speed controls
 
-## 📋 Requirements
+##  Requirements
 
 - **Windows only**
 - **.NET 10 Runtime** (free download, link provided in app)
 - **Harmony mod** (free, Steam Workshop link in app)
 - **RimWorld 1.3, 1.4, 1.5, or 1.6**
 
-## 🚀 Build Instructions
+##  Build Instructions
 
 ### Prerequisites
 - Visual Studio 2022 Community (or later)
@@ -51,7 +51,7 @@ dotnet build -c Release
 # FlexTool\bin\Release\net10.0-windows\ + all mod subfolders
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 FlexTool/
